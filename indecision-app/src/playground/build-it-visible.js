@@ -1,4 +1,3 @@
-
 let visibility = false;
 
 const toggleVisibility = () => {
