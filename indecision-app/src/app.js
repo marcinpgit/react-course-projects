@@ -1,3 +1,5 @@
+//live-server
+// babel src/app.js --out-file=public/scripts/app.js --presets=env,reacr --watch
 console.log('App.js is runnig.');
 
 const app = {
