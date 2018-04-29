@@ -5,7 +5,7 @@ console.log('App.js is runnig.');
 var app = {
     title: 'Indecision App',
     subtitle: 'Put your life in the hands of computer.',
-    options: []
+    options: ['Item one', 'Item two']
 };
 
 var onFromSubmit = function onFromSubmit(e) {
@@ -20,12 +20,12 @@ var onFromSubmit = function onFromSubmit(e) {
     }
 };
 
-var appRoot = document.getElementById('app');
-
 var onRemoveAll = function onRemoveAll() {
     app.options = [];
     render();
 };
+
+var appRoot = document.getElementById('app');
 
 var render = function render() {
     var template = React.createElement(
@@ -59,16 +59,13 @@ var render = function render() {
         React.createElement(
             'ol',
             null,
-            React.createElement(
-                'li',
-                null,
-                'item one'
-            ),
-            React.createElement(
-                'li',
-                null,
-                'item two'
-            )
+            app.options.map(function (option) {
+                return React.createElement(
+                    'li',
+                    { key: option },
+                    option
+                );
+            })
         ),
         React.createElement(
             'form',

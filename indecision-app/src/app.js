@@ -3,7 +3,7 @@ console.log('App.js is runnig.');
 const app = {
     title: 'Indecision App',
     subtitle: 'Put your life in the hands of computer.',
-    options: []
+    options: ['Item one', 'Item two']
 };
 
 const onFromSubmit = (e) => {
@@ -18,12 +18,12 @@ const onFromSubmit = (e) => {
     }
 };
 
-const appRoot = document.getElementById('app');
-
 const onRemoveAll = () => {
     app.options = [];
     render();
 };
+
+const appRoot = document.getElementById('app');
 
 const render = () => {
     const template = (
@@ -34,8 +34,11 @@ const render = () => {
             <p>{ app.options.length }</p>
             <button onClick={ onRemoveAll }>Remove All</button>
             <ol>
-                <li>item one</li>
-                <li>item two</li>
+                {
+                    app.options.map( option => {
+                        return <li key={ option }>{ option }</li>
+                    })
+                }
             </ol>
             <form onSubmit={ onFromSubmit }>
                 <input type='text' name='option'/>
