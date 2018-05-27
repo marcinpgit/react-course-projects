@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render AddExpensePAge corectly 1`] = `
+exports[`should render AddExpensePAge correctly 1`] = `
 <div>
   <h1>
     Add Expense

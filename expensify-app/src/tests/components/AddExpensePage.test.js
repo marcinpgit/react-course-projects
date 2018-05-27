@@ -12,7 +12,7 @@ beforeEach(() => {
     wrapper = shallow(<AddExpensePage addExpense={ addExpense } history={ history }/>);
 });
 
-test('should render AddExpensePAge corectly', () =>{
+test('should render AddExpensePAge correctly', () =>{
     expect(wrapper).toMatchSnapshot();
 });
 
