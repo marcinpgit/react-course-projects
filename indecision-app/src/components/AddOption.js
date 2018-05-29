@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default class AddOption extends React.Component {
+    
     state = {
         error: undefined
     };
