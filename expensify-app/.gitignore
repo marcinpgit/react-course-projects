@@ -1,5 +1,9 @@
 # dependencies
 /node_modules
+/public/bundles.js
+/public/bundles.js.map
+/public/styles.css
+/public/styles.css.map
 
 # testing
 /coverage
